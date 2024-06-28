@@ -444,10 +444,6 @@ Tag               = raw_string_lit .
 数据类型写法示例：
 
 ```go
-// 别名类型 [1]
-type Int int
-type Integer = int
-
 // 空结构体
 type Foo {}
 
@@ -461,7 +457,8 @@ type Bar {
 
 type Baz {
     Bar    `json:"baz"`
-    // 结构体内嵌 [2]
+    Array [3]int `json:"array"`
+    // 结构体内嵌 goctl 1.6.8 版本支持
     Qux {
         Foo string `json:"foo"`
         Bar bool   `json:"bar"`
@@ -486,15 +483,7 @@ type (
 ```
 
 :::caution 注意
-[1] 虽然语法上支持别名，但是在语义分析时会对别名进行拦截，这或在将来进行放开。
-
-[2] 虽然语法上支持结构体内嵌，但是在语义分析时会对别名进行拦截，这或在将来进行放开。
-
-除此之外：
-
-1. 目前 api 语法中虽然支持了数组的语法，但是在语义分析时会对数组进行拦截，目前建议用切片替代，这或在将来放开。
-2. 不支持 package 设计，如 `time.Time`。
-
+1. 不支持 package 设计，如 `time.Time`。
 :::
 
 ### service 语句

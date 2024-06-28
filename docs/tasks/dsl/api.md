@@ -274,6 +274,10 @@ type GetUserInfoResp {
 	// api 支持匿名结构体嵌套，也支持结构体引用
 	Base
 	Data UserInfo `json:"data"`
+	// 匿名结构体
+	Nested {
+	  Foo string `json:"foo"`
+	} `json:"nested"`
 }
 
 // 定义一个名称为 user 的服务
