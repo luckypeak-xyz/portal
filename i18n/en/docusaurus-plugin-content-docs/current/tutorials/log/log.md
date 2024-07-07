@@ -151,9 +151,10 @@ import (
 func main() {
 	var c logx.LogConf
 	conf.MustLoad("config.yaml", &c)
-
 	logx.MustSetup(c)
+	
 	logx.AddWriter(logx.NewWriter(os.Stdout))
+	
 	for {
 		select {
 		case <-proc.Done():
