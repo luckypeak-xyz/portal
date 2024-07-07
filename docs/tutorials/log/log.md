@@ -133,3 +133,46 @@ go-zero在文件输出模式下面，支持2种文件的分割模式 按照天 �
 同时会判断日志个数，如果超过 KeepDays 的设置，将会移出历史的旧的配置文件。
 
 在 大小分割模式下面，go-zero 将会记录当前日志文件的大小，超过 MaxSize 将会分割日志。
+
+## 同时输出到文件和控制台
+
+有时，我们期望在输出到文件的同时，也能输出到控制台，便于调试（注意：这会影响性能，生产上谨慎使用）
+
+示例如下：
+
+```Go
+package main
+
+import (
+	"os"
+	"time"
+
+	"github.com/zeromicro/go-zero/core/conf"
+	"github.com/zeromicro/go-zero/core/logx"
+	"github.com/zeromicro/go-zero/core/proc"
+)
+
+func main() {
+	var c logx.LogConf
+	conf.MustLoad("config.yaml", &c)
+
+	logx.MustSetup(c)
+	logx.AddWriter(logx.NewWriter(os.Stdout))
+	for {
+		select {
+		case <-proc.Done():
+			return
+		default:
+			time.Sleep(time.Second)
+			logx.Info(time.Now())
+		}
+	}
+}
+```
+
+配置文件如下：
+
+```yaml
+Mode: file
+Encoding: json
+```
