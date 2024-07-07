@@ -140,7 +140,7 @@ go-zero在文件输出模式下面，支持2种文件的分割模式 按照天 �
 
 示例如下：
 
-```Go
+```go
 package main
 
 import (

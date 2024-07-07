@@ -129,3 +129,46 @@ go-zero in file output mode supports split between two files by day and by size.
 Under DateSplit mode, go-zero will be backed up by access .log, error.log, stat.log, slow.log and create new log files for log printing. The number of logs will also be judged and will be removed from the old configuration file if more than KeepDays settings.
 
 In size split mode, go-zero will record the size of the current log file, more than MaxSize will split the log.
+
+## Output to both file and console
+
+We might expect to output to both file and console for debugging purpose. Use it with caution, performance might be affected.
+
+Demo code below:
+
+```go
+package main
+
+import (
+	"os"
+	"time"
+
+	"github.com/zeromicro/go-zero/core/conf"
+	"github.com/zeromicro/go-zero/core/logx"
+	"github.com/zeromicro/go-zero/core/proc"
+)
+
+func main() {
+	var c logx.LogConf
+	conf.MustLoad("config.yaml", &c)
+
+	logx.MustSetup(c)
+	logx.AddWriter(logx.NewWriter(os.Stdout))
+	for {
+		select {
+		case <-proc.Done():
+			return
+		default:
+			time.Sleep(time.Second)
+			logx.Info(time.Now())
+		}
+	}
+}
+```
+
+Demo config file:
+
+```yaml
+Mode: file
+Encoding: json
+```
