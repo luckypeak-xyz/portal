@@ -100,11 +100,11 @@ go-zero sdk 版本 v1.5.0 的 gateway 配置会造成配置冲突，请避开此
 	}
 
 	message Response {
-	string msg = 1;
+		string msg = 1;
 	}
 
 	service Hello {
-	rpc Ping(Request) returns(Response);
+		rpc Ping(Request) returns(Response);
 	}
 	```
 
