@@ -924,7 +924,6 @@ Flags:
 |tinyblob        |string|
 |ltree           |[]byte|
 
-
 ### 类型映射自定义
 
 类型映射自定义只有试验版本才能使用，关于如何开启试验版本，请参考 <a href="docs/tutorials/cli/env" target="_blank">goctl env</a>，关于配置使用请参考 <a href="docs/tutorials/cli/config" target="_blank">goctl config</a>
@@ -932,10 +931,12 @@ Flags:
 示例 1. 修改 decimal 为 decimal.Decimal 类型
 
 1. 在需要生成 model 的工程中初始化配置
+ 
 ```bash
 $ goctl config init
 goctl.yaml generated in ~/workspace/go-zero/tools/goctl/goctl.yaml
 ```
+
 2. 修改类型映射关系
 
 灰色底纹部分为自定义映射类型。

@@ -53,7 +53,7 @@ PROTO_GEN_GO_GRPC_VERSION=1.2.0
 ```
 
 | <img width={100}/> 字段 | <img width={200}/> 默认值 | <img width={800}/> 参数说明 |
-| -- | --- | --- | 
+| -- | --- | --- |
 | GOCTL_OS | 空字符串 | 操作系统 |
 | GOCTL_ARCH | 空字符串 | 系统架构 |
 | GOCTL_HOME | 空字符串 | goctl 配置目录 |
