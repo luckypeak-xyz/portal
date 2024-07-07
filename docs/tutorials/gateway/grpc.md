@@ -145,15 +145,15 @@ Host: localhost
 Port: 8888
 Upstreams:
 - Grpc:
-	Target: 0.0.0.0:8080
-	# protoset mode
-	ProtoSets:
-	- hello.pb
-	# Mappings can also be written in proto options
-	Mappings:
-	- Method: get
-		Path: /ping
-		RpcPath: hello.Hello/Ping
+    Target: 0.0.0.0:8080
+    # protoset mode
+    ProtoSets:
+    - hello.pb
+    # Mappings can also be written in proto options
+    Mappings:
+    - Method: get
+      Path: /ping
+      RpcPath: hello.Hello/Ping
 ```
 
 6. 进入 `demo1/gateway` 目录， 新建 `gateway.go` 文件，内容如下：
