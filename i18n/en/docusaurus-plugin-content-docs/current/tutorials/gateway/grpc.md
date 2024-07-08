@@ -145,7 +145,7 @@ Host: localhost
 Port: 8888
 Upstreams:
   - Grpc:
-      Target: 0.0.0.0:8080
+      Target: localhost:8080
     # protoset mode
     ProtoSets:
       - hello.pb
@@ -179,7 +179,6 @@ func main() {
     defer gw.Stop()
     gw.Start()
 }
-
 ```
 
 7 Open two separate terminals to start the grpc server service and the gateway service, and then visit `http://localhost:8888/ping`:
@@ -266,7 +265,7 @@ Host: localhost
 Port: 8888
 Upstreams:
   - Grpc:
-      Target: 0.0.0.0:8080
+      Target: localhost:8080
     # Mappings can also be written in proto options
     Mappings:
       - Method: get
@@ -297,7 +296,6 @@ func main() {
     defer gw.Stop()
     gw.Start()
 }
-
 ```
 
 6 Open two separate terminals to start the grpc server service and the gateway service, and then visit `http://localhost:8888/ping`:
