@@ -145,12 +145,12 @@ Host: localhost
 Port: 8888
 Upstreams:
 - Grpc:
-    Target: 0.0.0.0:8080
-    # protoset mode
-    ProtoSets:
+    Target: localhost:8080
+  # protoset mode
+  ProtoSets:
     - hello.pb
-    # Mappings can also be written in proto options
-    Mappings:
+  # Mappings can also be written in proto options
+  Mappings:
     - Method: get
       Path: /ping
       RpcPath: hello.Hello/Ping
@@ -265,7 +265,7 @@ Host: localhost
 Port: 8888
 Upstreams:
 - Grpc:
-  Target: 0.0.0.0:8080
+  Target: localhost:8080
   # Mappings can also be written in proto options
   Mappings:
   - Method: get
