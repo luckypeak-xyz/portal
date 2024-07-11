@@ -358,6 +358,37 @@ module.exports = {
             ],
         },
     ],
+    components: [
+        'components',
+        {
+            type: 'category',
+            label: '限流器',
+            collapsed: false,
+            items: [
+                'components/limiter/token',
+                'components/limiter/peroid',
+            ],
+        },
+        {
+            type: 'category',
+            label: '日志',
+            collapsed: false,
+            items: [
+                'components/log/logx',
+                'components/log/logc',
+            ],
+        },
+        {
+            type: 'category',
+            label: '并发组件',
+            collapsed: false,
+            items: [
+                'components/mr',
+                'components/fx',
+                'components/syncx/limit',
+            ]
+        }
+    ],
     reference: [
         'reference',
         'reference/proto',
