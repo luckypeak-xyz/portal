@@ -931,7 +931,6 @@ Flags:
 示例 1. 修改 decimal 为 decimal.Decimal 类型
 
 1. 在需要生成 model 的工程中初始化配置
- 
 ```bash
 $ goctl config init
 goctl.yaml generated in ~/workspace/go-zero/tools/goctl/goctl.yaml
