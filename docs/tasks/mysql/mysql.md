@@ -124,9 +124,9 @@ func main() {
 		fmt.Println(r.RowsAffected())
 	}
 
-    ```
+```
 
-	执行程序，我们会在user 中插入一条记录。
+  执行程序，我们会在user 中插入一条记录。
 
 2. 查询数据
 
