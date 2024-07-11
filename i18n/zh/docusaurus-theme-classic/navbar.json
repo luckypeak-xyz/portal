@@ -11,6 +11,10 @@
     "message": "指南",
     "description": "Navbar item with label 指南"
   },
+  "item.label.组件": {
+    "message": "组件",
+    "description": "Navbar item with label 组件"
+  },
   "item.label.参考": {
     "message": "参考",
     "description": "Navbar item with label 参考"
