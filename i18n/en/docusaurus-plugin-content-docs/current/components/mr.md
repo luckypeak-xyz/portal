@@ -13,8 +13,10 @@ The `mr` package provides a framework for performing map-reduce operations in Go
 ### Errors
 
 ```go
-ErrCancelWithNil = errors.New("mapreduce cancelled with nil")
-ErrReduceNoOutput = errors.New("reduce not writing value")
+var (
+    ErrCancelWithNil = errors.New("mapreduce cancelled with nil")
+    ErrReduceNoOutput = errors.New("reduce not writing value")
+)
 ```
 
 - **ErrCancelWithNil**: Error indicating that the map-reduce operation was canceled with nil.

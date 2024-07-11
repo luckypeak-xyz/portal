@@ -13,8 +13,10 @@ slug: /docs/components/mr
 ### 错误
 
 ```go
-ErrCancelWithNil = errors.New("mapreduce cancelled with nil")
-ErrReduceNoOutput = errors.New("reduce not writing value")
+var (
+    ErrCancelWithNil = errors.New("mapreduce cancelled with nil")
+    ErrReduceNoOutput = errors.New("reduce not writing value")
+)
 ```
 
 - **ErrCancelWithNil**：表示 MapReduce 操作被取消并且未返回错误。
