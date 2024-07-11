@@ -69,43 +69,52 @@ module.exports = {
         },
         {
             type: 'category',
-            label: 'gRPC Server 开发',
+            label: 'gRPC 开发',
             collapsed: false,
             items: [
-                'tasks/grpc/server/quickstart'
+                {
+                    type: 'category',
+                    label: 'Server 开发',
+                    items: [
+                        'tasks/grpc/server/quickstart',
+                    ]
+                },
+                {
+                    type: 'category',
+                    label: 'Client 开发',
+                    items: [
+                        'tasks/grpc/client/quickstart',
+                    ]
+                }
             ],
         },
         {
             type: 'category',
-            label: 'gRPC Client 开发',
+            label: '数据库操作',
             collapsed: false,
             items: [
-                'tasks/grpc/client/quickstart',
-            ],
-        },
-        {
-            type: 'category',
-            label: 'MySQL 数据库操作',
-            collapsed: false,
-            items: [
-                'tasks/mysql/mysql',
-            ],
-        },
-        {
-            type: 'category',
-            label: 'Mongo 数据库操作',
-            collapsed: false,
-            items: [
-                'tasks/mongo/conn',
-                'tasks/mongo/curd',
-            ],
-        },
-        {
-            type: 'category',
-            label: 'Redis 使用',
-            collapsed: false,
-            items: [
-                'tasks/redis/redis',
+                {
+                    type: 'category',
+                    label: 'MySQL',
+                    items: [
+                        'tasks/mysql/mysql',
+                    ]
+                },
+                {
+                    type: 'category',
+                    label: 'MongoDB',
+                    items: [
+                        'tasks/mongo/conn',
+                        'tasks/mongo/curd',
+                    ]
+                },
+                {
+                    type: 'category',
+                    label: 'Redis',
+                    items: [
+                        'tasks/redis/redis',
+                    ]
+                }
             ],
         },
         {
@@ -220,20 +229,25 @@ module.exports = {
         },
         {
             type: 'category',
-            label: 'gRPC Server',
+            label: 'gRPC',
             collapsed: false,
             items: [
-                'tutorials/grpc/server/configuration',
-                'tutorials/grpc/server/example',
-            ],
-        },
-        {
-            type: 'category',
-            label: 'gRPC Client',
-            collapsed: false,
-            items: [
-                'tutorials/grpc/client/configuration',
-                'tutorials/grpc/client/conn',
+                {
+                    type: 'category',
+                    label: 'Server',
+                    items: [
+                        'tutorials/grpc/server/configuration',
+                        'tutorials/grpc/server/example',
+                    ]
+                },
+                {
+                    type: 'category',
+                    label: 'Client',
+                    items: [
+                        'tutorials/grpc/client/configuration',
+                        'tutorials/grpc/client/conn',
+                    ]
+                }
             ],
         },
         {
@@ -255,36 +269,40 @@ module.exports = {
         },
         {
             type: 'category',
-            label: 'MySQL',
+            label: '数据库',
             collapsed: false,
             items: [
-                'tutorials/mysql/connection',
-                'tutorials/mysql/curd',
-                'tutorials/mysql/cache',
-                'tutorials/mysql/bulk-insert',
-                'tutorials/mysql/local-transaction',
-                'tutorials/mysql/distribute-transaction',
-            ],
-        },
-        {
-            type: 'category',
-            label: 'Mongo',
-            collapsed: false,
-            items: [
-                'tutorials/mongo/connection',
-                'tutorials/mongo/curd',
-                'tutorials/mongo/cache',
-            ],
-        },
-        {
-            type: 'category',
-            label: 'Redis',
-            collapsed: false,
-            items: [
-                'tutorials/redis/redis-lock',
-                'tutorials/redis/metric',
-                'tutorials/redis/db-selection',
-            ],
+                {
+                    type: 'category',
+                    label: 'MySQL',
+                    items: [
+                        'tutorials/mysql/connection',
+                        'tutorials/mysql/curd',
+                        'tutorials/mysql/cache',
+                        'tutorials/mysql/bulk-insert',
+                        'tutorials/mysql/local-transaction',
+                        'tutorials/mysql/distribute-transaction',
+                    ]
+                },
+                {
+                    type: 'category',
+                    label: 'MongoDB',
+                    items: [
+                        'tutorials/mongo/connection',
+                        'tutorials/mongo/curd',
+                        'tutorials/mongo/cache',
+                    ]
+                },
+                {
+                    type: 'category',
+                    label: 'Redis',
+                    items: [
+                        'tutorials/redis/redis-lock',
+                        'tutorials/redis/metric',
+                        'tutorials/redis/db-selection',
+                    ]
+                }
+            ]
         },
         {
             type: 'category',
@@ -340,29 +358,6 @@ module.exports = {
             ],
         },
     ],
-    // components: [
-    //     'components',
-    //     'components/mr',
-    //     'components/fx',
-    //     {
-    //         type: 'category',
-    //         label: '限流器',
-    //         collapsed: false,
-    //         items: [
-    //             'components/limiter/token',
-    //             'components/limiter/peroid',
-    //         ],
-    //     },
-    //     {
-    //         type: 'category',
-    //         label: '日志',
-    //         collapsed: false,
-    //         items: [
-    //             'components/log/logx',
-    //             'components/log/logc',
-    //         ],
-    //     },
-    // ],
     reference: [
         'reference',
         'reference/proto',
