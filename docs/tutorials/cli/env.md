@@ -65,7 +65,6 @@ PROTO_GEN_GO_GRPC_VERSION=1.2.0
 | PROTOC_GEN_GO_VERSION | 空字符串 | protoc_gen_go 插件版本，没有安装则无 |
 | PROTO_GEN_GO_GRPC_VERSION | 空字符串 | protoc_gen_go_grpc 插件版本，没有安装则无 |
 
-
 ### goctl env check 指令
 
 goctl env check 指令用于快速检测 goctl 的依赖环境是否准备好，如果你的环境中缺少了 goctl 的依赖环境，goctl env check 会给出相应的提示。
