@@ -396,6 +396,17 @@ module.exports = {
         'reference/goctl-plugins',
         'reference/about-us',
     ],
+    faq: [
+        'faq',
+        {
+            type: 'category',
+            label: 'HTTP',
+            collapsed: false,
+            items: [
+                'faq/http/fileserver',
+            ],
+        },
+    ],
     contributing: [
         'contributing',
         'contributing/doc',

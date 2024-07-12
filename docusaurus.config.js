@@ -130,6 +130,12 @@ module.exports = {
                 },
                 {
                     type: 'doc',
+                    docId: 'faq',
+                    label: 'FAQ',
+                    position: 'left',
+                },
+                {
+                    type: 'doc',
                     docId: 'contributing',
                     label: '贡献',
                     position: 'left',
@@ -234,6 +240,9 @@ module.exports = {
                     }
                     if ((match = docPath.match(/reference\/(.*)\.md/)) != null) {
                         return `https://github.com/zeromicro/portal/tree/feat/v3/docs/reference/${match[1]}.md`;
+                    }
+                    if ((match = docPath.match(/faq\/(.*)\.md/)) != null) {
+                        return `https://github.com/zeromicro/portal/tree/feat/v3/docs/faq/${match[1]}.md`;
                     }
                     if ((match = docPath.match(/tutorials\/(.*)\.md/)) != null) {
                         return `https://github.com/zeromicro/portal/tree/feat/v3/docs/tutorials/${match[1]}.md`;
